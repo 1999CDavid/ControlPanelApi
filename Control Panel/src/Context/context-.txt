@@ -1,0 +1,4 @@
+Para qué se crea un contexto?
+-> Para trasmitir información o datos a multiples componentes.
+
+

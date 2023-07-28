@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import ProductosContext from './ProductosContext'
+import ProductosContext from '../Context/ProductosContext'
 
 const Mostrar = () => {
     const {contar} = useContext(ProductosContext);

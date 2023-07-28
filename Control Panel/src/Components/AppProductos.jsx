@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductosProvider from './ProductosProvider'
+import ProductosProvider from '../Provider/ProductosProvider'
 import Mostrar from './Mostrar'
 
 const AppProductos = () => {
