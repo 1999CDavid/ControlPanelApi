@@ -1,13 +1,13 @@
 import React from 'react'
 import ProductosProvider from '../Provider/ProductosProvider'
-import Mostrar from './Mostrar'
+import TotalProductos from './TotalProductos'
 
 const AppProductos = () => {
   return (
     <ProductosProvider>
-      <Mostrar/>
+      <TotalProductos/>
     </ProductosProvider>
   )
 }
 
-export default AppProductos
+export default AppProductos;

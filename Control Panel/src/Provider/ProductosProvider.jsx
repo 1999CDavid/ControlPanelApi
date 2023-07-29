@@ -1,33 +1,24 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState} from "react";
 import ProductosContext from "../Context/ProductosContext";
 
 const ProductosProvider = ({ children }) => {
-    const [productos, actualizar] = useState([])
+    const [productos, actualizar] = useState([]);
+    useEffect(()=>{
+        fetch('https://fakestoreapi.com/products/')
+        .then(res=>res.json())
+        .then((Listaproductos)=>{  
+            actualizar(Listaproductos)
+        })
+        .catch(error => console.error(error));
+    },[]);
     
-    useEffect(() => {
-        const obtener = ()=>{
-            fetch('https://fakestoreapi.com/products/1')
-            .then(res=>res.json())
-            .then((data)=>actualizar(data))
-            .catch(error => console.error(error));
-        };
-        obtener();
-        },[productos] );
-
-    const contar = () =>{
-        return(
-            console.log(productos.length)
-        )
-    }
-
     return(
-        <ProductosContext.Provider value={{contar}}>
+        <ProductosContext.Provider value={{productos}}>
             {children}
         </ProductosContext.Provider>
-    )
+    );
+};      
 
-}
-        
 export default ProductosProvider;
 
 

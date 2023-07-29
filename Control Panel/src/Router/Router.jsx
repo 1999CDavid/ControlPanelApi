@@ -9,8 +9,8 @@ const Router = createBrowserRouter([
             {
                 path:"/productos",
                 element: <AppProductos/>,
+                
             },
-            
         ],
     }
 ])
