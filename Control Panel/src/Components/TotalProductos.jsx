@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 const TotalProductos = () => {
     const {productos} = useContext(ProductosContext);
     let cantidad = productos.length
-    console.log(productos.length)
   return (
     <>
       {productos.length > 0 ? (

@@ -10,6 +10,7 @@ const NavBar = () => {
         </h1>
         <nav>
             <Link to ="/productos"> Total de Productos</Link>
+            <Link to ="/ingresos"> Total de ingresos</Link>
         </nav>
     </article>
   );
