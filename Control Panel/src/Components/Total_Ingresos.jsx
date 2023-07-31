@@ -1,37 +1,41 @@
-import React, { useContext } from 'react'
-//import OrdersContext from '../Context/OrdersContext';
-import ProductosContext from '../Context/ProductosContext'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react';
+import OrdersContext from '../Context/OrdersContext';
+import ProductosContext from '../Context/ProductosContext';
+import { Link } from 'react-router-dom';
 
 const Total_Ingresos = () => {
-  //const {carrito} = useContext(OrdersContext);
-  const {productos} = useContext(ProductosContext);
-  
-  let precios = []
-  let calcular = ()=>{
+  const { carritos } = useContext(OrdersContext);
+  const { productos } = useContext(ProductosContext);
 
-  if (!productos) {
-    console.error("Productos are not defined!");
-    return;
-  }
+  const calcularIngresosTotales = () => {
+    //if (!productos || !carritos) {
+      //return 0; // O cualquier valor predeterminado que desees en caso de que no haya datos disponibles
+    //}
 
-    productos.forEach((producto) => {
-      precios.push(producto.price)
+    let total = 0;
+    carritos.forEach((carrito) => {
+      carrito.products.forEach((productoCarrito) => {
+        const productoEncontrado = productos.find((producto) => producto.id === productoCarrito.productId);
+        if (productoEncontrado) {
+          total += productoEncontrado.price * productoCarrito.quantity;
+        }
+      });
     });
-    console.log(precios) 
-  }
-  calcular(); 
+    return total;
+  };
+
   return (
     <>
-      {precios.length <= 0 ? (
-        <p>Cargando...</p>
+      {carritos && productos && carritos.length > 0 ? (
+        <p>Ingresos totales: ${calcularIngresosTotales().toFixed()}</p>
       ) : (
-        <p>{precios}</p>
+        <p>Cargando...</p>
       )}
-      <Link to={"/"}>Ir atras</Link>
+      <Link to={"/"}>Ir atrás</Link>
     </>
+  );
+};
 
-  )
-}
+export default Total_Ingresos;
 
-export default Total_Ingresos
+

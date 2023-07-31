@@ -3,7 +3,7 @@ import OrdersContext from '../Context/OrdersContext'
 import React from 'react'
 
 const OrdersProvider = ({ children }) => {
-    const [carrito, actualizar] = useState([]);
+    const [carritos, actualizar] = useState([]);
     useEffect(()=>{
         fetch('https://fakestoreapi.com/carts')
         .then(res=>res.json())
@@ -14,7 +14,7 @@ const OrdersProvider = ({ children }) => {
     },[]);
     
     return (
-    <OrdersContext.Provider value={{carrito}}>
+    <OrdersContext.Provider value={{carritos}}>
         {children}
     </OrdersContext.Provider>
   )
