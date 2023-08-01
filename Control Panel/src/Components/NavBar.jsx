@@ -10,8 +10,9 @@ const NavBar = () => {
     <article className={Style.Barra_sup}>
         <h1>Tienda FakeApi</h1>
         <nav>
-            <Link to ="/productos" > Total de Productos</Link>
+            <Link to ="/productos" onClick={()=>{Update(!VerCard)}}> Total de Productos</Link>
             <Link to ="/ingresos" onClick={()=>{Update(!VerCard)}}> Total de ingresos</Link>
+            <Link to ="/pedidos" > Total de Pedidos</Link>
         </nav>       
     </article>
   );
