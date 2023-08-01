@@ -6,7 +6,7 @@ import Style from '../Styles/NavBar.module.css'
 
 const Total_Ingresos = () => {
   const { carritos } = useContext(OrdersContext);
-  let { productos,VerCard,Update } = useContext(ProductosContext);
+  const { productos,VerCard,Update } = useContext(ProductosContext);
 
   const calcularIngresosTotales = () => {
     let total = 0;
