@@ -4,6 +4,7 @@ import React from 'react'
 
 const OrdersProvider = ({ children }) => {
     const [carritos, actualizar] = useState([]);
+    
     useEffect(()=>{
         fetch('https://fakestoreapi.com/carts')
         .then(res=>res.json())
