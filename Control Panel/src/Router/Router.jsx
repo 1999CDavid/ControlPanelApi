@@ -4,6 +4,7 @@ import AppProductos from "../Components/AppProductos";
 import AppIngresos from "../Components/AppIngresos";
 import AppPedidos from "../Components/AppPedidos";
 import AppPromedios from "../Components/AppPromedios";
+import AppMasVendidos from "../Components/AppMasVendidos";
 const Router = createBrowserRouter([
     {
         path:"/",
@@ -24,6 +25,10 @@ const Router = createBrowserRouter([
             {
                 path:"/promedios",
                 element: <AppPromedios/>,
+            },
+            {
+                path:"/masvendidos",
+                element: <AppMasVendidos/>,
             },
         ],
     }

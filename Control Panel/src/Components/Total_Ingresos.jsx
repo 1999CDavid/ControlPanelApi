@@ -27,8 +27,8 @@ const Total_Ingresos = () => {
       {VerCard ? (
         productos && carritos && productos.length > 0 && carritos.length > 0 ? (
           <article className={Style.Card}>
-            <h2>Total de Ingresos</h2>
-            <p>Ingresos totales:{calcularIngresosTotales().toFixed()}</p>
+            <h2>Total de Ingresos </h2>
+            <p>Ingresos totales: ${calcularIngresosTotales().toFixed()} dólares</p>
             <Link to="/" className={Style.BackButton} onClick={()=>{Update(!VerCard)}}>
               Ir atrás
             </Link>

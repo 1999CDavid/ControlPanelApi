@@ -30,9 +30,25 @@
   margin: 50px auto;
   height: 25vh;
   max-width: 400px;
-  border-radius: 5px;
+  border-radius: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
+}
+.Card_list {
+  background-color: #f8f1c9df;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content:space-around;
+  padding: 15px;
+  margin: 50px auto;
+  height: 40vh;
+  max-width: 600px;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.Card_list > ul > li {
+  list-style:none;
 }
 
 .BackButton {

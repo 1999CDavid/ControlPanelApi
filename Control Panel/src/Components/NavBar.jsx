@@ -15,6 +15,7 @@ const NavBar = () => {
             <Link to ="/ingresos" onClick={()=>{Update(!VerCard)}}> Total de ingresos</Link>
             <Link to ="/pedidos " onClick={()=>{Update(!VerCard)}} > Total de Pedidos</Link>
             <Link to ="/promedios" onClick={()=>{Update(!VerCard)}} > Precio de Promedio</Link>
+            <Link to ="/masvendidos" > Mas vendidos </Link>
         </nav>       
     </article>
   );
