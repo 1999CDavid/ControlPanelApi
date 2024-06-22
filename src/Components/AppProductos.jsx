@@ -2,11 +2,14 @@ import React from 'react'
 import ProductosProvider from '../Provider/ProductosProvider'
 import TotalProductos from './TotalProductos'
 
+
 const AppProductos = () => {
   return (
-    <ProductosProvider>
-      <TotalProductos/>
-    </ProductosProvider>
+    <div>
+      <ProductosProvider>
+        <TotalProductos/>
+      </ProductosProvider>
+    </div>
   )
 }
 

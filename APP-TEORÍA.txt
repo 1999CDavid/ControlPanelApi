@@ -5,3 +5,13 @@ Para qué se crea un contexto?
 ProductosProvider : Este proveedor en su primera versión solo se encarga de obtener los datos 
 de la Api. En cada componente se pretende realizar la lógica correspondiente. 
 
+Hay que hacer un provider para orders
+
+{productId:2,quantity:4},
+{productId:1,quantity:10},
+{productId:5,quantity:2}
+
+
+[productId:2,quantity:4]
+[productId:1,quantity:10] 
+[productId:5,quantity:2]
